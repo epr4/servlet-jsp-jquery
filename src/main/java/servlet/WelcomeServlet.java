@@ -1,5 +1,8 @@
 package servlet;
 
+import data.Data;
+import model.Student;
+
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.WebServlet;
@@ -19,7 +22,14 @@ public class WelcomeServlet extends HttpServlet {
             throws ServletException, IOException {
         String message = request.getParameter("message");
         request.setAttribute("text", message);
-        request.getRequestDispatcher("/ExampleThree.jsp").forward(request, response);
+        request.setAttribute("students", Data.getInstance().getStudents());
+
+        for (Student student : Data.getInstance().getStudents()) {
+
+        }
+
+//        request.getRequestDispatcher("/ExampleThree.jsp").forward(request, response);
+        request.getRequestDispatcher("/welcome.jsp").forward(request, response);
     }
 
 /*
