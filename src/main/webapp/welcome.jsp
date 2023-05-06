@@ -1,22 +1,22 @@
 <%@ page import="java.util.List,model.Student" %>
 <html>
 <body>
-<h2>Example</h2>
-
-<h2>Columns</h2>
-<ul>
+<h2>Welcome</h2>
+<table>
 
 <%
 List<Student> students = (List<Student>)request.getAttribute("students");
    for (Student student : students) {
 //List<String> students = (List<String>)request.getAttribute("students");
 //   for (String student : students) {
-   %>
-<li><%=student.id%></li>
-<li><%=student.mark%></li>
+%>
+<tr>
+<td><%=student.id%></td>
+<td><%=student.mark%></td>
+</tr>
 <% } %>
 
-</ul>
+</table>
 
 </body>
 </html>
