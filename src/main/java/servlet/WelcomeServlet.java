@@ -22,7 +22,8 @@ public class WelcomeServlet extends HttpServlet {
             throws ServletException, IOException {
         String message = request.getParameter("message");
         request.setAttribute("text", message);
-        request.setAttribute("students", Data.getInstance().getStudents());
+        request.setAttribute("deps", Data.getInstance().getDeps());
+//        request.setAttribute("students", Data.getInstance().getStudents());
 
 //        request.getRequestDispatcher("/ExampleThree.jsp").forward(request, response);
         request.getRequestDispatcher("/welcome.jsp").forward(request, response);
