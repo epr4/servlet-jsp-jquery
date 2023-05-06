@@ -24,10 +24,6 @@ public class WelcomeServlet extends HttpServlet {
         request.setAttribute("text", message);
         request.setAttribute("students", Data.getInstance().getStudents());
 
-        for (Student student : Data.getInstance().getStudents()) {
-
-        }
-
 //        request.getRequestDispatcher("/ExampleThree.jsp").forward(request, response);
         request.getRequestDispatcher("/welcome.jsp").forward(request, response);
     }

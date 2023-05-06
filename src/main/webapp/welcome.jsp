@@ -6,13 +6,17 @@
 <h2>Columns</h2>
 <ul>
 
-<% List<Student> students = (List<Student>)request.getAttribute("students");
-   for (Student student : students) { %>
-<li>${student}</li>
+<%
+List<Student> students = (List<Student>)request.getAttribute("students");
+   for (Student student : students) {
+//List<String> students = (List<String>)request.getAttribute("students");
+//   for (String student : students) {
+   %>
+<li><%=student.id%></li>
+<li><%=student.mark%></li>
 <% } %>
 
 </ul>
 
-</c:if>
 </body>
 </html>

@@ -1,16 +1,12 @@
 package model;
 
 public class Student {
-    String id;
+    public String id;
+    public int mark;
 
-    public Student(String id) {
+    public Student(String id, int mark) {
         this.id=id;
+        this.mark=mark;
     }
 
-    @Override
-    public String toString() {
-        return "Student{" +
-                "id='" + id + '\'' +
-                '}';
-    }
 }
