@@ -82,7 +82,7 @@ span.psw {
 </head>
 <body>
 
-<form>
+<form action="welcome" method="post">
     <div class="container">
         <label for="uid"><b>User ID</b></label>
         <input type="text" placeholder="Enter User ID" name="uid" required>

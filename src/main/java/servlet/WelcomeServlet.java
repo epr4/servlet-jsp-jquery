@@ -29,6 +29,15 @@ public class WelcomeServlet extends HttpServlet {
         request.getRequestDispatcher("/welcome.jsp").forward(request, response);
     }
 
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        String message = request.getParameter("message");
+        request.setAttribute("text", message);
+        request.setAttribute("deps", Data.getInstance().getDeps());
+        request.getRequestDispatcher("/welcome.jsp").forward(request, response);
+    }
+
 /*
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)

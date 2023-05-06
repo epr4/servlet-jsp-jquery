@@ -2,7 +2,7 @@
 <html>
 <body>
 <h2>Welcome</h2>
-<table>
+<table border="1">
 
 <%
 //List<Student> students = (List<Student>)request.getAttribute("students");
