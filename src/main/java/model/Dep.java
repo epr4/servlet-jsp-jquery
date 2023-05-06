@@ -22,4 +22,13 @@ public class Dep {
     public List<Student> getStudents() {
         return students;
     }
+
+    public int getPass() {
+        int pass=0;
+        for (Student student : students) {
+            if (student.mark>=40)
+                pass++;
+        }
+        return pass*100/students.size();
+    }
 }
