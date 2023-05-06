@@ -19,6 +19,18 @@ public class Dep {
         students.add(student);
     }
 
+    public Dep(String name, Student s6, Student s7, Student s8) {
+        this.name=name;
+        students=new ArrayList<>();
+        students.add(s6);
+        students.add(s7);
+        students.add(s8);
+    }
+
+    public int getSize() {
+        return students.size();
+    }
+
     public List<Student> getStudents() {
         return students;
     }

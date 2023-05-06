@@ -35,7 +35,13 @@ public class Data {
         students.add(new Student("S3",60));
         students.add(new Student("S4",90));
         deps.add(new Dep("Dep 1",students));
+
         deps.add(new Dep("Dep 2",new Student("S5",30)));
+
+        deps.add(new Dep("Dep 3",
+                new Student("S6",32),
+                new Student("S7",70),
+        new Student("S8",20)));
 
     }
 

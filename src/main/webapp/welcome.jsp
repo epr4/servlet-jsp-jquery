@@ -15,10 +15,10 @@ List<Dep> deps = (List<Dep>)request.getAttribute("deps");
        i++;
 %>
 <tr>
-<% if (i==1) { %><td rowspan="4"><%=dep.name%></td><% } %>
+<% if (i==1) { %><td rowspan="<%=dep.getSize()%>"><%=dep.name%></td><% } %>
 <td><%=student.id%></td>
 <td><%=student.mark%></td>
-<% if (i==1) { %><td rowspan="4"><%=dep.getPass()%></td><% } %>
+<% if (i==1) { %><td rowspan="<%=dep.getSize()%>"><%=dep.getPass()%></td><% } %>
 </tr>
 <% } } %>
 
