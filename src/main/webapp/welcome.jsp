@@ -8,6 +8,9 @@
   </script>
 
   <style type="text/css">
+        th {
+          color:white;
+        }
 		.content {
 			position: absolute;
 			top: 50%;
@@ -39,11 +42,11 @@
 <body>
 <h2>Welcome</h2>
 <table border="1">
-    <thead>
-      <td>Department</td>
-      <td>Student ID</td>
-      <td>Marks</td>
-      <td>Pass %</td>
+    <thead bgcolor="blue">
+      <th>Department</th>
+      <th>Student ID</th>
+      <th>Marks</th>
+      <th>Pass %</th>
     </thead>
 
 <%
