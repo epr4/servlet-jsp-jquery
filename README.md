@@ -12,7 +12,7 @@ On Windows the command is:
 
 `C:/> target/bin/webapp.bat`
 
-That’s it. Your application should start up on port 8080. You can see the JSP at http://localhost:8080 and the servlet and http://localhost:8080/hello
+That’s it. Your application should start up on port 8080. You can see the JSP at http://localhost:8080 
 
 Ref:
 https://devcenter.heroku.com/articles/create-a-java-web-application-using-embedded-tomcat
