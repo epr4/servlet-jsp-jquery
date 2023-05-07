@@ -1,5 +1,41 @@
 <%@ page import="java.util.List,model.Dep,model.Student" %>
 <html>
+
+<head>
+  <!-- jQuery cdn link -->
+  <script src=
+                  "https://code.jquery.com/jquery-3.5.1.min.js">
+  </script>
+
+  <style type="text/css">
+		.content {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 500px;
+			height: 200px;
+			text-align: center;
+			background-color: #e8eae6;
+			box-sizing: border-box;
+			padding: 10px;
+			z-index: 100;
+			display: none;
+			/*to hide popup initially*/
+		}
+
+		.close-btn {
+			position: absolute;
+			right: 20px;
+			top: 15px;
+			background-color: black;
+			color: white;
+			border-radius: 50%;
+			padding: 4px;
+		}
+	</style>
+</head>
+
 <body>
 <h2>Welcome</h2>
 <table border="1">
@@ -16,13 +52,29 @@ List<Dep> deps = (List<Dep>)request.getAttribute("deps");
 %>
 <tr>
 <% if (i==1) { %><td rowspan="<%=dep.getSize()%>"><%=dep.name%></td><% } %>
-<td><%=student.id%></td>
+<td><a onclick="togglePopup('<%=student.name%>')"><u><%=student.id%></u></a></td>
 <td><%=student.mark%></td>
 <% if (i==1) { %><td rowspan="<%=dep.getSize()%>"><%=dep.getPass()%></td><% } %>
 </tr>
 <% } } %>
 
 </table>
+
+<!-- div containing the popup -->
+<div class="content">
+  <div onclick="togglePopup()" class="close-btn">X</div>
+  <h4>Name</h4>
+  <div class="studentName">Popup</div>
+</div>
+
+<script type="text/javascript">
+
+		// Function to show and hide the popup
+		function togglePopup(name) {
+			$('.studentName').html(name);
+			$(".content").toggle();
+		}
+	</script>
 
 </body>
 </html>
