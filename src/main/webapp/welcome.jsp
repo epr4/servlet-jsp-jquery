@@ -39,6 +39,12 @@
 <body>
 <h2>Welcome</h2>
 <table border="1">
+    <thead>
+      <td>Department</td>
+      <td>Student ID</td>
+      <td>Marks</td>
+      <td>Pass %</td>
+    </thead>
 
 <%
 //List<Student> students = (List<Student>)request.getAttribute("students");
@@ -51,10 +57,10 @@ List<Dep> deps = (List<Dep>)request.getAttribute("deps");
        i++;
 %>
 <tr>
-<% if (i==1) { %><td rowspan="<%=dep.getSize()%>"><%=dep.name%></td><% } %>
+<% if (i==1) { %><td rowspan="<%=dep.getSize()%>" align="center"><%=dep.name%></td><% } %>
 <td><a onclick="togglePopup('<%=student.name%>')"><u><%=student.id%></u></a></td>
-<td><%=student.mark%></td>
-<% if (i==1) { %><td rowspan="<%=dep.getSize()%>"><%=dep.getPass()%></td><% } %>
+<td align="right"><%=student.mark%></td>
+<% if (i==1) { %><td rowspan="<%=dep.getSize()%>" align="center"><%=dep.getPass()%></td><% } %>
 </tr>
 <% } } %>
 
